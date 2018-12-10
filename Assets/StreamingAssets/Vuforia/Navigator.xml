@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="emergency_exit_big" size="1.000000 1.376238" />
+    <ImageTarget name="drinks" size="1.000000 1.909396" />
+    <ImageTarget name="campus_birdview" size="1.000000 0.659628" />
+    <ImageTarget name="emergency_door" size="1.000000 0.812741" />
+    <ImageTarget name="Coffe_machine" size="1.000000 1.077058" />
+    <ImageTarget name="RedTower_downstairs" size="1.000000 0.825326" />
+    <ImageTarget name="Extintor" size="1.000000 1.414427" />
+    <ImageTarget name="YellowTower_downstairs" size="1.000000 0.797306" />
+    <ImageTarget name="SenseFils" size="1.000000 1.002995" />
+    <ImageTarget name="Alarma" size="1.000000 1.455538" />
+    <ImageTarget name="BlueTower_downstairs" size="1.000000 0.814484" />
+    <ImageTarget name="emergency_exit" size="1.000000 0.501023" />
+  </Tracking>
+</QCARConfig>
