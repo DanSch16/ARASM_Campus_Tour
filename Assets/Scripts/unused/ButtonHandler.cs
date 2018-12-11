@@ -2,11 +2,11 @@ using UnityEngine;
 using UnityEngine.Video;
 
 public class ButtonHandler: MonoBehaviour {
-    private int pause = 0;
+    //private int pause = 0;
     // Use this for initialization
     void Start()
     {
-        pause = 0;
+        //pause = 0;
         GameObject.Find("Video_Quad").GetComponent<VideoPlayer>().Stop();
 
     }

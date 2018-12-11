@@ -17,7 +17,7 @@ using System;
 /// Changes made to this file could be overwritten when upgrading the Vuforia version.
 /// When implementing custom event handler behavior, consider inheriting from this class instead.
 /// </summary>
-public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
+public class VideoTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 {
     #region PROTECTED_MEMBER_VARIABLES
 
@@ -101,11 +101,17 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         foreach (var component in canvasComponents)
             component.enabled = true;
 
-if (mTrackableBehaviour.TrackableName.Equals("Vuforia")){
+        if (mTrackableBehaviour.TrackableName.Equals("drinks"))
+        {
+            GameObject.Find("ColaAdvertisement").GetComponent<VideoPlayer>().Play();        //Start video here
+        }
 
-	//GameObject.Find("VideoShow").GetComponent<VideoPlayer>().Play();        //Start video here
-            //addde
-    //GameObject.Find("Video_Quad").GetComponent<VideoPlayer>().Play();        //Start video here
+        if (mTrackableBehaviour.TrackableName.Equals("campus_birdview"))
+        {   
+            if(GameObject.Find("PMTDroneFootage").GetComponent<VideoOnMouseDown>().isPlaying())
+            {
+                GameObject.Find("PMTDroneFootage").GetComponent<VideoPlayer>().Play();        //Start video here
+            }
         }
     }
 
@@ -128,10 +134,16 @@ if (mTrackableBehaviour.TrackableName.Equals("Vuforia")){
         foreach (var component in canvasComponents)
             component.enabled = false;
 
-if (mTrackableBehaviour.TrackableName.Equals("Vuforia")){
-	Debug.Log("Pausing video");
-            //GameObject.Find("VideoShow").GetComponent<VideoPlayer>().Pause();       //Pause video if not visible anymore
-            GameObject.Find("Video_Quad").GetComponent<VideoPlayer>().Pause();       //Pause video if not visible anymore
+        if (mTrackableBehaviour.TrackableName.Equals("drinks"))
+        {
+	        Debug.Log("Pausing advertisement video");
+            GameObject.Find("ColaAdvertisement").GetComponent<VideoPlayer>().Pause();       //Pause video if not visible anymore
+        }
+
+        if (mTrackableBehaviour.TrackableName.Equals("campus_birdview"))
+        {
+            Debug.Log("Pausing PMT_Tour video");
+            GameObject.Find("PMTDroneFootage").GetComponent<VideoPlayer>().Pause();       //Pause video if not visible anymore
         }
     }
 
