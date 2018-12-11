@@ -1,0 +1,109 @@
+# WaveFront OBJ - Mtl file exported by LightRay3D
+# benz2400.mtl
+# Num Materials: 15
+
+newmtl kabi1
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\kabi1.tga
+
+newmtl kabi2
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\kabi2.jpg
+
+newmtl antrieb
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\antrieb.jpg
+
+newmtl tank
+Ka 0.500000 0.500000 0.500000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\tank.jpg
+
+newmtl radvf
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\radvf.jpg
+
+newmtl kaba
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\kaba.tga
+
+newmtl mhorn
+Ka 0.500000 0.500000 0.500000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\mhorn.jpg
+
+newmtl geraete
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\geraete.tga
+
+newmtl tritt
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\tritt.tga
+
+newmtl gestell1
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\gestell1.jpg
+
+newmtl gestell2
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\gestell2.jpg
+
+newmtl detail
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\details.tga
+
+newmtl licht
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\licht.tga
+
+newmtl radhf
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\radhf.jpg
+
+newmtl radp
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd G:\spiele\mohaa\model_entwurf\BWMOD_benz_truck\cubus_1017A_flkfz2400\radp.jpg
+
