@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AugmentedInformation.unity
     guid: 41b0e4d5b9dcf864da1f5740bd39ac88
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Augmented_Objects_Tour.unity
     guid: 5adf73f267a2a34408c137f1d5b984ba
   m_configObjects: {}
