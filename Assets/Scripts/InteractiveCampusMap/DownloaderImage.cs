@@ -4,7 +4,7 @@ using System.Collections;
 public class DownloaderImage : MonoBehaviour {
 
     public GameObject Plane;
-
+    public GameObject Plane2;
     public GameObject Items;
 
 	// Use this for initialization
@@ -21,15 +21,23 @@ public class DownloaderImage : MonoBehaviour {
         print("X " + x + " Y " + y);
 		//x=x+1;
         WWW www = new WWW("http://a.tile.openstreetmap.org/"+zoom.ToString() + "/"+ x.ToString() + "/" + y.ToString() + ".png");
+        int x2 = x + 1;
+        WWW www2 = new WWW("http://a.tile.openstreetmap.org/" + zoom.ToString() + "/" + x2.ToString() + "/" + y.ToString() + ".png");
 
-		//WWW www = new WWW("http://a.tile.openstreetmap.org/0/0/0.png");
+        //WWW www = new WWW("http://a.tile.openstreetmap.org/0/0/0.png");
         yield return www;
+        yield return www2;
 
-Debug.Log("Error"+www.error);
+        Debug.Log("Error"+www.error);
+        Debug.Log("Error" + www2.error);
 
         Texture2D texture = new Texture2D(1, 1, TextureFormat.ARGB32, true);
         www.LoadImageIntoTexture(texture);
         Plane.GetComponent<Renderer>().material.mainTexture = texture;
+
+        Texture2D texture2 = new Texture2D(1, 1, TextureFormat.ARGB32, true);
+        www2.LoadImageIntoTexture(texture2);
+        Plane2.GetComponent<Renderer>().material.mainTexture = texture2;
 
 
 
