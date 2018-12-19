@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 1085595247}
   - component: {fileID: 1085595246}
   m_Layer: 5
-  m_Name: Template
+  m_Name: DropDownTemplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
