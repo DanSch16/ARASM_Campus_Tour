@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 61814687}
   - component: {fileID: 61814686}
   m_Layer: 0
-  m_Name: POI
+  m_Name: CurrentPOI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,8 +159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c718de356c64044926b699b43ff52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poiList: {fileID: 844185401}
   Lat: 41.275613
   Long: 1.987529
+  MapLoader: {fileID: 1836369802}
 --- !u!135 &61814687
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -287,6 +289,49 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 85328217}
   m_CullTransparentMesh: 0
+--- !u!1 &136526381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 136526382}
+  - component: {fileID: 136526383}
+  m_Layer: 0
+  m_Name: Room_021
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &136526382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136526381}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 844185400}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136526383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136526381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8710188e5261c4dadcf89dd10e977f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Room 021
+  Lat: 41.275262
+  Long: 1.986888
 --- !u!1 &222284794
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +639,92 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
+--- !u!1 &362262015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 362262016}
+  - component: {fileID: 362262017}
+  m_Layer: 0
+  m_Name: Room_020
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &362262016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362262015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 844185400}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &362262017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 362262015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8710188e5261c4dadcf89dd10e977f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Room 020
+  Lat: 41.275338
+  Long: 1.986901
+--- !u!1 &377337854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377337855}
+  - component: {fileID: 377337856}
+  m_Layer: 0
+  m_Name: Room_027_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &377337855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 377337854}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 844185400}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &377337856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 377337854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8710188e5261c4dadcf89dd10e977f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Room 027_3
+  Lat: 0
+  Long: 0
 --- !u!1001 &460457401
 Prefab:
   m_ObjectHideFlags: 0
@@ -635,7 +766,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1765643685615512, guid: c730ec3edf17ec04da345931ef000bae, type: 2}
       propertyPath: m_Name
-      value: Map
+      value: MapPlaneLeft
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c730ec3edf17ec04da345931ef000bae, type: 2}
@@ -650,6 +781,7 @@ GameObject:
   - component: {fileID: 548729132}
   - component: {fileID: 548729135}
   - component: {fileID: 548729134}
+  - component: {fileID: 548729136}
   - component: {fileID: 548729133}
   m_Layer: 5
   m_Name: ChooseRoom
@@ -722,13 +854,7 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: Room 201
-      m_Image: {fileID: 0}
-    - m_Text: Room 027-3
-      m_Image: {fileID: 0}
-    - m_Text: Room 021
-      m_Image: {fileID: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -779,6 +905,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 548729131}
   m_CullTransparentMesh: 0
+--- !u!114 &548729136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548729131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed55a46c649ec54fa55f81b99f3168e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  POIList: {fileID: 844185401}
 --- !u!1 &737863717
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +984,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room 201
+  m_Text: 
 --- !u!222 &737863720
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -951,6 +1089,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &844185399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 844185400}
+  - component: {fileID: 844185401}
+  m_Layer: 0
+  m_Name: POIList
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &844185400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 844185399}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: -0.001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 136526382}
+  - {fileID: 362262016}
+  - {fileID: 377337855}
+  m_Father: {fileID: 1747602499}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &844185401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 844185399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bccf694064f1c004f9168368d55eebaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListPOI:
+  - {fileID: 136526383}
+  - {fileID: 362262017}
+  - {fileID: 377337856}
 --- !u!1 &1085595244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1280,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1765643685615512, guid: c730ec3edf17ec04da345931ef000bae, type: 2}
       propertyPath: m_Name
-      value: Map
+      value: MapPlaneRight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c730ec3edf17ec04da345931ef000bae, type: 2}
@@ -1441,8 +1626,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c718de356c64044926b699b43ff52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lat: 41.275262
-  Long: 1.986888
+  poiList: {fileID: 0}
+  Lat: 41.275613
+  Long: 1.987529
+  MapLoader: {fileID: 1836369802}
 --- !u!135 &1616034683
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1669,7 +1856,7 @@ GameObject:
   - component: {fileID: 1672020411}
   - component: {fileID: 1672020410}
   m_Layer: 0
-  m_Name: Map (1)
+  m_Name: MapPlaneRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1761,7 +1948,7 @@ GameObject:
   - component: {fileID: 1721784620}
   - component: {fileID: 1721784619}
   m_Layer: 0
-  m_Name: Map
+  m_Name: MapPlaneLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1915,6 +2102,35 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1737605890}
   m_CullTransparentMesh: 0
+--- !u!1 &1747602498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1747602499}
+  m_Layer: 0
+  m_Name: POIs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1747602499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1747602498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 844185400}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1836369802
 GameObject:
   m_ObjectHideFlags: 0

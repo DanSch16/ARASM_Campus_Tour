@@ -7,25 +7,20 @@ public class DownloaderImage : MonoBehaviour {
     public GameObject Plane2;
     public GameObject Items;
 
-	// Use this for initialization
-	IEnumerator Start () {
+    //public double LonReference;
+    //public double LatReference;
 
-        //Plane.transform.position = new Vector3(Plane.transform.localScale.x/2, Plane.transform.localScale.y/2, 0);
+    private GameObject currentPOI;
+    private int x = 132518;
+    private int y = 98018;
+    private int zoom = 18;
 
-        int zoom = 18;
- 
-        Point p = WorldToTilePos(1.986918, 41.275374, zoom);
-        print(p.X + " " + p.Y);
-        int x = Mathf.FloorToInt((float)p.X);
-        int y = Mathf.FloorToInt((float)p.Y);
-        print("X " + x + " Y " + y);
-		//x=x+1;
+    // Use this for initialization
+    IEnumerator Start () {
+        
         WWW www = new WWW("http://a.tile.openstreetmap.org/"+zoom.ToString() + "/"+ x.ToString() + "/" + y.ToString() + ".png");
-        int x2 = x + 1;
-        WWW www2 = new WWW("http://a.tile.openstreetmap.org/" + zoom.ToString() + "/" + x2.ToString() + "/" + y.ToString() + ".png");
-
-        //WWW www = new WWW("http://a.tile.openstreetmap.org/0/0/0.png");
         yield return www;
+        WWW www2 = new WWW("http://a.tile.openstreetmap.org/" + zoom.ToString() + "/" + (x+1).ToString() + "/" + y.ToString() + ".png");
         yield return www2;
 
         Debug.Log("Error"+www.error);
@@ -92,4 +87,6 @@ public class DownloaderImage : MonoBehaviour {
         double pixelX = ((targetLong - minLong) / (maxLong - minLong)) * Plane.transform.localScale.y;
         return pixelX;
     }
+
+    //public void set
 }
