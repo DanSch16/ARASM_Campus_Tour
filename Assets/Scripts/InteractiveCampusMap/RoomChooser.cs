@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class RoomChooser : MonoBehaviour {
-    public POIList POIList;
+    [SerializeField]
+    private POIList POIList;
     //Create a List of new Dropdown options
     private List<string> m_DropOptions;
     //This is the Dropdown

@@ -5,26 +5,19 @@ public class DownloaderImage : MonoBehaviour {
 
     public GameObject Plane;
     public GameObject Plane2;
-    public GameObject Items;
 
-    //public double LonReference;
-    //public double LatReference;
-
-    private GameObject currentPOI;
-    private int x = 132518;
-    private int y = 98018;
-    private int zoom = 18;
+    public int x = 132518;     //fixed value here, as we won't change map location
+    public int y = 98018;
+    public int zoom = 18;
 
     // Use this for initialization
     IEnumerator Start () {
         
         WWW www = new WWW("http://a.tile.openstreetmap.org/"+zoom.ToString() + "/"+ x.ToString() + "/" + y.ToString() + ".png");
         yield return www;
+       
         WWW www2 = new WWW("http://a.tile.openstreetmap.org/" + zoom.ToString() + "/" + (x+1).ToString() + "/" + y.ToString() + ".png");
         yield return www2;
-
-        Debug.Log("Error"+www.error);
-        Debug.Log("Error" + www2.error);
 
         Texture2D texture = new Texture2D(1, 1, TextureFormat.ARGB32, true);
         www.LoadImageIntoTexture(texture);
@@ -33,17 +26,6 @@ public class DownloaderImage : MonoBehaviour {
         Texture2D texture2 = new Texture2D(1, 1, TextureFormat.ARGB32, true);
         www2.LoadImageIntoTexture(texture2);
         Plane2.GetComponent<Renderer>().material.mainTexture = texture2;
-
-
-
-        foreach (Transform t in Items.transform) {
-            GameObject item = t.gameObject;
-            print("Location of Item " + item.GetComponent<Item>().Long + " " + item.GetComponent<Item>().Lat);
-            double a = DrawCubeX(item.GetComponent<Item>().Long, TileToWorldPos(x, y, zoom).X, TileToWorldPos(x + 1, y, zoom).X);
-            double b = DrawCubeY(item.GetComponent<Item>().Lat, TileToWorldPos(x, y + 1, zoom).Y, TileToWorldPos(x, y, zoom).Y);
-            print("Calculated " + a + " " + b);
-            item.transform.position = new Vector3((float)a, (float)b, item.transform.position.z);
-        }
 	}
 	
 	// Update is called once per frame
@@ -65,9 +47,8 @@ public class DownloaderImage : MonoBehaviour {
         return p;
     }
 
-    // X -> longitud
-    // Y -> latitud
-    // devuelve la esquina superior izquierda del tile
+    // X -> longitude
+    // Y -> latitude
     public Point TileToWorldPos(double tile_x, double tile_y, int zoom) {
         Point p = new Point();
         double n = System.Math.PI - ((2.0 * System.Math.PI * tile_y) / System.Math.Pow(2.0, zoom));
@@ -87,6 +68,4 @@ public class DownloaderImage : MonoBehaviour {
         double pixelX = ((targetLong - minLong) / (maxLong - minLong)) * Plane.transform.localScale.y;
         return pixelX;
     }
-
-    //public void set
 }

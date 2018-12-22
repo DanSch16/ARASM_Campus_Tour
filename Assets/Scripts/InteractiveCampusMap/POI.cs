@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class POI : MonoBehaviour {
 
-    //public uint ID;
     public string Name;
     public double Lat;
     public double Long;
-    //public url
-
+    public string CoAPUri;
+ 
     // Use this for initialization
     void Start () {
 		

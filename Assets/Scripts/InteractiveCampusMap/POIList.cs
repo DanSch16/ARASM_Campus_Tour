@@ -1,19 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class POIList : MonoBehaviour {
 
-    public List<POI> ListPOI;
+    [SerializeField]
+    private GameObject MapLoader;
+    private DownloaderImage DI;
 
+    [SerializeField]
+    private GameObject currentPOI;
+    public List<POI> ListPOI;
     private int currentPOIid;
-    private int max_pointer;
 
     // Use this for initialization
     void Start()
     {
-        //max_pointer = 2;
-        currentPOIid = 0;
+        DI = MapLoader.GetComponent<DownloaderImage>();
+        if (ListPOI.Count > 0)
+        {
+            updatePOILocation(0);
+        }
     }
 
     // Update is called once per frame
@@ -22,16 +30,16 @@ public class POIList : MonoBehaviour {
 
     }
 
-    /*
-    public void NextObject()
+    public void updatePOILocation(int newPOIid)
     {
-        Debug.Log("Click" + pointer);
-        pois[pointer].SetActive(false);
-        pointer++;
-        if (pointer >= max) pointer = 0;
-        pois[pointer].SetActive(true);
-
+        currentPOIid = newPOIid;
+        double a = DI.DrawCubeX(ListPOI[currentPOIid].Long, DI.TileToWorldPos(DI.x, DI.y, DI.zoom).X, DI.TileToWorldPos(DI.x + 1, DI.y, DI.zoom).X);
+        double b = DI.DrawCubeY(ListPOI[currentPOIid].Lat, DI.TileToWorldPos(DI.x, DI.y + 1, DI.zoom).Y, DI.TileToWorldPos(DI.x, DI.y, DI.zoom).Y);
+        currentPOI.transform.position = new Vector3((float)a, (float)b, currentPOI.transform.position.z);
     }
-    */
 
+    public string getCurrentPOIuri()
+    {
+        return ListPOI[currentPOIid].CoAPUri;
+    }
 }
