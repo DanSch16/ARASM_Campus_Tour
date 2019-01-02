@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
 {
     private string currentCoAPuri;
     private bool bLightState;
+    private int iRequestCounter;
 
     [SerializeField]
     private POIList poiList;
@@ -40,30 +41,36 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Text sunset;
 
-    [SerializeField]
-    private Text testText;
+    //[SerializeField]
+    //private Text testText;
 
     void Start()
     {
         coapManager.ResponseReceivedHandler += ResponseReceived;
         bLightState = false;
-
+        iRequestCounter = 0;
+        updateInfos();
     }
 
     public void changeSelectedPOI(Dropdown DD)
     {
-        testText.text = "";
+        //testText.text = "";                                 //REMOVE
         poiList.updatePOILocation(DD.value);
+        updateInfos();
+    }
+
+    public void updateInfos()
+    {
         currentCoAPuri = poiList.getCurrentPOIuri();
 
-        inside_brightness.text = "Brightness: ";
-        GetState("light");
-
         inside_temp.text = "Inside:     ";
-        //GetState("temperature");
+        StartCoroutine(GetState("temperature", 0));
+
+        inside_brightness.text = "Brightness: ";
+        StartCoroutine(GetState("light", 1));
 
         light_state.text = "Light:";
-        GetState("led");
+        StartCoroutine(GetState("led", 2));
 
         GetGeoInfo();
         UpdateClockTimeInfo();
@@ -79,7 +86,7 @@ public class UIManager : MonoBehaviour
         {
             ChangeLightState("1");
         }
-        GetState("led");       
+        StartCoroutine(GetState("led",3));       
     }
 
     private void ChangeLightState(string state)
@@ -88,8 +95,9 @@ public class UIManager : MonoBehaviour
         coapManager.DoPut(uri, state);
     }
 
-    public void GetState(string resource)
-    {
+    IEnumerator GetState(string resource, int seq)
+    {      
+        yield return new WaitUntil(()=> (seq == iRequestCounter || seq == 3));          //to avoid deny of service of server -->subsequent requests/gets
         string uri = coapManager.GetUri(currentCoAPuri, resource); 
         coapManager.DoGet(uri);
     }
@@ -119,7 +127,16 @@ public class UIManager : MonoBehaviour
         {
             inside_temp.text = inside_temp.text + e.Data;
         }
-        testText.text = testText.text + e.Resource + ":" + e.Data + " "; 
+
+        if (iRequestCounter < 2)
+        {
+            iRequestCounter++;
+        }
+        else
+        {
+            iRequestCounter = 0;
+        }
+        //testText.text = testText.text + e.Resource + ":" + e.Data + " ";                        //REMOVE
     }
 
     public void UpdateClockTimeInfo()
@@ -142,7 +159,7 @@ public class UIManager : MonoBehaviour
         JObject obj = JObject.Parse(www.text);
 
         outside_temp.text = "Outside:    " + (string)obj["current"]["temp_c"];
-        weather_condition.text = "Condition: " + (string)obj["current"]["condition"]["text"];
+        weather_condition.text = "Weather: " + (string)obj["current"]["condition"]["text"];
         sunrise.text = "Sunrise: " + (string)obj["forecast"]["forecastday"][0]["astro"]["sunrise"];
         sunset.text =  "Sunset:  " + (string)obj["forecast"]["forecastday"][0]["astro"]["sunset"];
     }

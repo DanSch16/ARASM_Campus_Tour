@@ -151,7 +151,6 @@ MonoBehaviour:
   time: {fileID: 1213503414}
   sunrise: {fileID: 1210179840}
   sunset: {fileID: 823576683}
-  testText: {fileID: 1590759333}
 --- !u!4 &38817908
 Transform:
   m_ObjectHideFlags: 0
@@ -287,7 +286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 92.22998, y: 65.84}
+  m_AnchoredPosition: {x: 86, y: 65.84}
   m_SizeDelta: {x: 76, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &62549594
@@ -914,8 +913,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.048065, y: 37.188797}
-  m_SizeDelta: {x: 290, y: 40}
+  m_AnchoredPosition: {x: 60, y: 37.188797}
+  m_SizeDelta: {x: 400, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409041158
 MonoBehaviour:
@@ -949,7 +948,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Condition:'
+  m_Text: 'Weather:'
 --- !u!222 &409041159
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2817,8 +2816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -474, y: -969}
-  m_SizeDelta: {x: 800, y: 40}
+  m_AnchoredPosition: {x: -792, y: -1028}
+  m_SizeDelta: {x: 1000, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1612658301
 GameObject:
