@@ -19,11 +19,11 @@ public class DownloaderImage : MonoBehaviour {
         WWW www2 = new WWW("http://a.tile.openstreetmap.org/" + zoom.ToString() + "/" + (x+1).ToString() + "/" + y.ToString() + ".png");
         yield return www2;
 
-        Texture2D texture = new Texture2D(1, 1, TextureFormat.ARGB32, true);
+        Texture2D texture = new Texture2D(1, 1, TextureFormat.ARGB32, false);
         www.LoadImageIntoTexture(texture);
         Plane.GetComponent<Renderer>().material.mainTexture = texture;
 
-        Texture2D texture2 = new Texture2D(1, 1, TextureFormat.ARGB32, true);
+        Texture2D texture2 = new Texture2D(1, 1, TextureFormat.ARGB32, false);
         www2.LoadImageIntoTexture(texture2);
         Plane2.GetComponent<Renderer>().material.mainTexture = texture2;
 	}
